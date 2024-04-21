@@ -1,0 +1,76 @@
+feedback
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .feedback-container {
+            background: #058333;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+        }
+
+        .star {
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+
+        .star.checked {
+            color: rgb(147, 128, 22);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var stars = document.querySelectorAll('.star');
+            stars.forEach(function (star) {
+                star.addEventListener('click', setRating);
+            });
+
+            function setRating(ev) {
+                stars.forEach(function (star) {
+                    star.classList.remove('checked');
+                });
+                ev.currentTarget.classList.add('checked');
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div class="feedback-container">
+        <div><input type="search" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div><a href="index.html">☞Home</a></div>
+        <div><a href="web2.html">☞Contact Us</a></div>
+        <div><a href="web.html">☞Login</a><i class="fa-solid fa-user" id="logo"></i></div> 
+        <h1>Feedback</h1>
+        <p>We value your FEEDBACK. Please rate our website and leave a FEEDBACK.</p>
+        <div class="stars">
+            <span class="star">♕</span>
+            <span class="star">♕</span>
+            <span class="star">♕</span>
+            <span class="star">♕</span>
+            <span class="star">♕</span>
+        </div>
+        <textarea placeholder="FEEDBACK..." rows="5" style="width: 100%;"></textarea>
+        <button style="display: block; width: 100%; padding: 10px; margin-top: 20px;">Submit</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+login page
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: #058333;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid rgb(50, 20, 20);
+            border-radius: 4px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #deebe2;
+        }
+
+        button {
+            background-color: #bad1c3;
+            color: #058333;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.5;
+        }
+
+        button:hover {
+            opacity: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div><input type="search" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div><a href="index.html">☞Home</a></div>
+        <div><a href="web3.html">☞Feedback</a></div>
+        <div><a href="web2.html">☞Contact Us</a></div>
+        <h1>Login/Sign In</h1>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+    </div>
+</body>
+
+</html>
